@@ -1019,3 +1019,140 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ==========================================================================
+   Categories Section
+   Author: Bhavana (bhavananbsc24@rvu.edu.in)
+   ========================================================================== */
+.categories-section {
+  padding: 5rem 0;
+  background: var(--bg-main);
+  position: relative;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: #c7d2fe;
+}
+
+.category-card:hover::before {
+  opacity: 1;
+}
+
+.category-card:hover .category-arrow {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+.category-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
+}
+
+.category-card:hover .category-icon-box {
+  transform: scale(1.08);
+}
+
+.category-icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+.cat-icon-books { background: #e0e7ff; color: #4338ca; }
+.cat-icon-electronics { background: #e0f2fe; color: #0369a1; }
+.cat-icon-calculators { background: #fef3c7; color: #b45309; }
+.cat-icon-furniture { background: #f3e8ff; color: #7e22ce; }
+.cat-icon-notes { background: #dcfce7; color: #15803d; }
+.cat-icon-other { background: #ffe4e6; color: #be123c; }
+
+.category-info {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.category-card:hover .category-name {
+  color: var(--primary);
+}
+
+.category-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.category-count {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.category-arrow {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  transition: all var(--transition-fast);
+  align-self: center;
+}
+
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
