@@ -17,12 +17,263 @@
 <body>
   <!-- CampusCart Application Container -->
   <div id="app" class="app-container">
+    
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement">
+      <div class="container top-announcement-inner">
+        <span class="announcement-badge">CAMPUS ONLY</span>
+        <p>🎉 Welcome Fall 2026 Batch! Use your university email for 100% verified student deals.</p>
+        <a href="#how-it-works" class="announcement-link">Learn how it works &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
     <header id="header" class="site-header">
-      <!-- Header content initialized here -->
+      <div class="container header-inner">
+        <a href="#" class="brand-logo" aria-label="CampusCart Home">
+          <div class="logo-icon-wrapper">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+              <path d="M3 6h18"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="logo-cap">🎓</span>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Campus<span class="logo-accent">Cart</span></span>
+            <span class="logo-sub">Student Marketplace</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#categories" class="nav-link">Categories</a></li>
+            <li><a href="#listings" class="nav-link">Featured Items</a></li>
+            <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="#trust-safety" class="nav-link">Safety & Trust</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="btn btn-ghost btn-signin" id="btnSignIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Sign In
+          </button>
+          <button type="button" class="btn btn-primary btn-sell" id="btnSellTop">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            Sell an Item
+          </button>
+          <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+          <div class="logo-text">
+            <span class="logo-name">Campus<span class="logo-accent">Cart</span></span>
+          </div>
+          <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link">Home</a></li>
+          <li><a href="#categories" class="mobile-nav-link">Categories</a></li>
+          <li><a href="#listings" class="mobile-nav-link">Featured Items</a></li>
+          <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+          <li><a href="#trust-safety" class="mobile-nav-link">Safety & Trust</a></li>
+        </ul>
+        <div class="mobile-drawer-actions">
+          <button class="btn btn-primary btn-block" id="btnMobileSell">Sell an Item</button>
+          <button class="btn btn-outline btn-block" id="btnMobileSignIn">Sign In</button>
+        </div>
+      </div>
+      <div class="mobile-nav-overlay" id="mobileOverlay"></div>
     </header>
 
     <main id="main-content">
-      <!-- Core landing page sections will be assembled here -->
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-bg-glow hero-glow-1"></div>
+        <div class="hero-bg-glow hero-glow-2"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span class="pulse-dot"></span>
+              <span>Exclusive for Verified Campus Students</span>
+            </div>
+
+            <h1 class="hero-title">
+              Your Campus.<br>
+              <span class="text-gradient">Your Marketplace.</span>
+            </h1>
+
+            <p class="hero-description">
+              Buy and sell textbooks, electronics, scientific calculators, dorm furniture, and study materials directly with fellow students — safely on campus with <strong>0% commission fees</strong>.
+            </p>
+
+            <!-- Hero Search Interface -->
+            <div class="hero-search-wrapper">
+              <form class="hero-search-form" id="heroSearchForm" onsubmit="return false;">
+                <div class="search-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.3-4.3"/>
+                  </svg>
+                </div>
+                <input 
+                  type="text" 
+                  id="heroSearchInput" 
+                  class="hero-search-input" 
+                  placeholder="Search textbooks, TI-84, monitors, desk lamps..." 
+                  autocomplete="off"
+                >
+                <div class="search-category-select">
+                  <select id="heroCategorySelect" aria-label="Search Category">
+                    <option value="all">All Categories</option>
+                    <option value="books">Books & Textbooks</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="calculators">Calculators</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="notes">Study Notes</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-search" id="heroSearchBtn">
+                  <span>Search</span>
+                </button>
+              </form>
+              <div class="search-quick-tags">
+                <span class="quick-tag-label">Trending on campus:</span>
+                <button type="button" class="quick-tag" data-search="Calculus">📚 Calculus</button>
+                <button type="button" class="quick-tag" data-search="Casio">🔢 Casio fx-991</button>
+                <button type="button" class="quick-tag" data-search="Headphones">🎧 Noise Cancelling</button>
+                <button type="button" class="quick-tag" data-search="Table">🪑 Study Desk</button>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="hero-cta-group">
+              <a href="#listings" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                Start Buying
+              </a>
+              <button type="button" class="btn btn-secondary btn-lg" id="btnHeroSell">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+                Sell an Item
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Visual Showcase / Mockup -->
+          <div class="hero-visual">
+            <div class="mockup-stage">
+              <!-- Central Interactive Mockup Card -->
+              <div class="showcase-card showcase-card-main">
+                <div class="card-glass-header">
+                  <div class="student-avatar-pill">
+                    <div class="avatar-circle">DP</div>
+                    <div class="avatar-meta">
+                      <span class="student-name">Deep P. <span class="verified-tick">✓</span></span>
+                      <span class="student-branch">CS Dept • Class of '26</span>
+                    </div>
+                  </div>
+                  <span class="deal-badge">🔥 Featured Deal</span>
+                </div>
+
+                <div class="showcase-preview-box">
+                  <div class="preview-svg-illustration">
+                    <svg viewBox="0 0 200 130" class="item-illustration" fill="none">
+                      <rect x="25" y="15" width="150" height="100" rx="8" fill="#4338ca" opacity="0.1"/>
+                      <rect x="35" y="25" width="130" height="80" rx="6" fill="#4f46e5"/>
+                      <rect x="45" y="35" width="50" height="60" rx="3" fill="#ffffff" opacity="0.9"/>
+                      <path d="M50 45h40M50 55h30M50 65h35M50 75h25" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
+                      <rect x="105" y="35" width="50" height="60" rx="3" fill="#6366f1"/>
+                      <circle cx="130" cy="55" r="14" fill="#ffffff" opacity="0.25"/>
+                      <path d="M124 55h12M130 49v12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M110 75h40" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                    </svg>
+                  </div>
+                  <span class="preview-condition-tag">Like New • 9/10</span>
+                </div>
+
+                <div class="showcase-card-body">
+                  <div class="card-category-tag">📚 Textbook Bundle</div>
+                  <h4 class="card-item-title">Advanced Engineering Mathematics (10th Ed)</h4>
+                  <div class="card-price-row">
+                    <div class="prices">
+                      <span class="current-price">₹650</span>
+                      <span class="original-price">₹2,200</span>
+                    </div>
+                    <span class="save-pill">Save 70%</span>
+                  </div>
+                  <div class="card-location-row">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Central Campus Library • Handover Today</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Micro Card 1: Calculator -->
+              <div class="floating-badge float-item-1">
+                <div class="float-icon-wrap calc-bg">🔢</div>
+                <div class="float-content">
+                  <span class="float-title">Casio fx-991EX</span>
+                  <span class="float-sub">₹850 • Saved ₹700</span>
+                </div>
+                <span class="float-status-dot"></span>
+              </div>
+
+              <!-- Floating Micro Card 2: Student Trust Shield -->
+              <div class="floating-badge float-item-2">
+                <div class="float-icon-wrap shield-bg">🛡️</div>
+                <div class="float-content">
+                  <span class="float-title">100% Student Verified</span>
+                  <span class="float-sub">Zero Scams • Campus Pickup</span>
+                </div>
+              </div>
+
+              <!-- Floating Micro Card 3: Live Exchange Alert -->
+              <div class="floating-badge float-item-3">
+                <div class="float-icon-wrap audio-bg">🎧</div>
+                <div class="float-content">
+                  <span class="float-title">Sony ANC Headphones</span>
+                  <span class="float-sub">Exchanged at Cafeteria</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus Stats Bar -->
+        <div class="container hero-stats-container">
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-number">1,500+</span>
+              <span class="stat-label">Active Campus Students</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">₹4.8L+</span>
+              <span class="stat-label">Student Money Saved</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">0%</span>
+              <span class="stat-label">Zero Commission Fees</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Safe On-Campus Handover</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer id="footer" class="site-footer">
