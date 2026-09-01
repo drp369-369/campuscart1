@@ -389,6 +389,446 @@
           </div>
         </div>
       </section>
+
+      <!-- Featured / Recent Listings Preview Section -->
+      <section id="listings" class="listings-section">
+        <div class="container">
+          <div class="listings-header-row">
+            <div>
+              <div class="section-badge">Verified Campus Deals</div>
+              <h2 class="section-title">Fresh Student Listings</h2>
+              <p class="section-subtitle">Real items posted by students across campus hostels & departments.</p>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="filter-pills" id="listingFilterPills">
+              <button type="button" class="filter-pill active" data-filter="all">All Items</button>
+              <button type="button" class="filter-pill" data-filter="books">📚 Books</button>
+              <button type="button" class="filter-pill" data-filter="electronics">💻 Electronics</button>
+              <button type="button" class="filter-pill" data-filter="calculators">🔢 Calculators</button>
+              <button type="button" class="filter-pill" data-filter="furniture">🪑 Furniture</button>
+              <button type="button" class="filter-pill" data-filter="notes">📝 Notes</button>
+              <button type="button" class="filter-pill" data-filter="other">🎒 Essentials</button>
+            </div>
+          </div>
+
+          <!-- Listings Grid (Static Demo Data Ready for API Connection in Phase 2) -->
+          <div class="listings-grid" id="listingsGrid">
+            
+            <!-- Item 1: Engineering Math Book -->
+            <article class="listing-card" data-category="books" data-title="Engineering Mathematics — 2nd Edition (Erwin Kreyszig)" data-price="650" data-condition="Like New" data-seller="Deep P." data-branch="CS '26" data-location="Central Library">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-indigo">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <rect x="25" y="15" width="110" height="90" rx="6" fill="#312e81"/>
+                    <rect x="35" y="25" width="90" height="70" rx="4" fill="#4f46e5"/>
+                    <path d="M45 40h40M45 52h50M45 64h30M45 76h45" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+                    <circle cx="105" cy="45" r="10" fill="#818cf8"/>
+                    <text x="105" y="49" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">∫dx</text>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-like-new">✨ Like New</span>
+                <span class="badge-discount">-70% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">📚 Textbooks</span>
+                  <span class="listing-time">3 hrs ago</span>
+                </div>
+                <h3 class="listing-title">Engineering Mathematics — 2nd Edition</h3>
+                <p class="listing-snippet">Erwin Kreyszig. Clean pages with zero pen marks. Free formula bookmark included.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹650</span>
+                  <span class="price-original">₹2,200</span>
+                  <span class="price-saved">Save ₹1,550</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar">DP</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Deep P. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">CS Dept • Class of '26</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Central Library Gate</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="1">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 2: Scientific Calculator -->
+            <article class="listing-card" data-category="calculators" data-title="Casio FX-991CW ClassWiz Scientific Calculator" data-price="950" data-condition="Open Box" data-seller="Bhavana N." data-branch="Biotech '25" data-location="North Quad Lounge">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-amber">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <rect x="45" y="10" width="70" height="100" rx="8" fill="#1e293b"/>
+                    <rect x="53" y="20" width="54" height="24" rx="3" fill="#cbd5e1"/>
+                    <text x="80" y="36" fill="#0f172a" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">sin(90)=1</text>
+                    <circle cx="60" cy="55" r="3" fill="#94a3b8"/><circle cx="73" cy="55" r="3" fill="#94a3b8"/><circle cx="86" cy="55" r="3" fill="#94a3b8"/><circle cx="99" cy="55" r="3" fill="#94a3b8"/>
+                    <circle cx="60" cy="68" r="3" fill="#94a3b8"/><circle cx="73" cy="68" r="3" fill="#94a3b8"/><circle cx="86" cy="68" r="3" fill="#94a3b8"/><circle cx="99" cy="68" r="3" fill="#94a3b8"/>
+                    <circle cx="60" cy="81" r="3" fill="#38bdf8"/><circle cx="73" cy="81" r="3" fill="#38bdf8"/><circle cx="86" cy="81" r="3" fill="#38bdf8"/><circle cx="99" cy="81" r="3" fill="#f43f5e"/>
+                    <circle cx="60" cy="94" r="3" fill="#cbd5e1"/><circle cx="73" cy="94" r="3" fill="#cbd5e1"/><circle cx="86" cy="94" r="3" fill="#cbd5e1"/><circle cx="99" cy="94" r="3" fill="#cbd5e1"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-open-box">📦 Open Box</span>
+                <span class="badge-discount">-48% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">🔢 Calculators</span>
+                  <span class="listing-time">5 hrs ago</span>
+                </div>
+                <h3 class="listing-title">Casio fx-991CW ClassWiz</h3>
+                <p class="listing-snippet">Latest model allowed for university exams. Original box & hard protective casing.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹950</span>
+                  <span class="price-original">₹1,800</span>
+                  <span class="price-saved">Save ₹850</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar avatar-bhavana">BN</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Bhavana N. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">Biotech Dept • Class of '25</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>North Quad Lounge</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="2">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 3: Dell 24" FHD Monitor -->
+            <article class="listing-card" data-category="electronics" data-title="Dell 24-Inch Full HD IPS Monitor (75Hz)" data-price="4800" data-condition="Good Condition" data-seller="Chethan S." data-branch="ECE '24" data-location="Hostel Block B">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-cyan">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <rect x="25" y="15" width="110" height="70" rx="4" fill="#0f172a"/>
+                    <rect x="29" y="19" width="102" height="62" rx="2" fill="#0284c7"/>
+                    <path d="M35 70l25-25 20 20 25-30 20 25" stroke="#38bdf8" stroke-width="2" fill="none"/>
+                    <rect x="74" y="85" width="12" height="18" fill="#475569"/>
+                    <rect x="55" y="103" width="50" height="6" rx="3" fill="#334155"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-good">👌 Excellent</span>
+                <span class="badge-discount">-58% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">💻 Electronics</span>
+                  <span class="listing-time">1 day ago</span>
+                </div>
+                <h3 class="listing-title">Dell 24" FHD IPS Monitor</h3>
+                <p class="listing-snippet">Crisp display, HDMI & Power cables included. Perfect for coding & hostel desk setup.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹4,800</span>
+                  <span class="price-original">₹11,500</span>
+                  <span class="price-saved">Save ₹6,700</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar avatar-chethan">CS</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Chethan S. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">ECE Dept • Class of '24</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Hostel Block B Common Room</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="3">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 4: Study Desk Chair -->
+            <article class="listing-card" data-category="furniture" data-title="Ergonomic Mesh Study Chair with Lumbar Cushion" data-price="1800" data-condition="Good Condition" data-seller="Chinmayee B." data-branch="AI & DS '24" data-location="Hostel Block A">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-purple">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <path d="M60 20h40a6 6 0 0 1 6 6v35H54V26a6 6 0 0 1 6-6Z" fill="#7e22ce"/>
+                    <rect x="50" y="61" width="60" height="14" rx="4" fill="#9333ea"/>
+                    <rect x="76" y="75" width="8" height="24" fill="#475569"/>
+                    <path d="M50 105l30-6 30 6" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="50" cy="107" r="3" fill="#1e293b"/>
+                    <circle cx="80" cy="101" r="3" fill="#1e293b"/>
+                    <circle cx="110" cy="107" r="3" fill="#1e293b"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-good">👌 Good Condition</span>
+                <span class="badge-discount">-60% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">🪑 Dorm Furniture</span>
+                  <span class="listing-time">1 day ago</span>
+                </div>
+                <h3 class="listing-title">Ergonomic Mesh Study Chair</h3>
+                <p class="listing-snippet">Breathable backrest, height adjustable gas lift. Relocating hostel so quick sale.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹1,800</span>
+                  <span class="price-original">₹4,500</span>
+                  <span class="price-saved">Save ₹2,700</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar avatar-chinmayee">CB</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Chinmayee B. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">AI & DS • Class of '24</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Hostel Block A Lobby</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="4">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 5: DSA Notes Bundle -->
+            <article class="listing-card" data-category="notes" data-title="DSA & Algorithms Complete Handwritten Notes (Spiral Bound)" data-price="350" data-condition="Crisp Notes" data-seller="Deep P." data-branch="CS '26" data-location="Food Court">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-emerald">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <rect x="35" y="15" width="90" height="90" rx="4" fill="#047857"/>
+                    <rect x="43" y="20" width="80" height="80" rx="3" fill="#ecfdf5"/>
+                    <path d="M55 35h55M55 47h45M55 59h50M55 71h35M55 83h50" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="35" cy="25" r="3" fill="#fbbf24"/><circle cx="35" cy="40" r="3" fill="#fbbf24"/><circle cx="35" cy="55" r="3" fill="#fbbf24"/><circle cx="35" cy="70" r="3" fill="#fbbf24"/><circle cx="35" cy="85" r="3" fill="#fbbf24"/><circle cx="35" cy="100" r="3" fill="#fbbf24"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-notes">📝 Topper Notes</span>
+                <span class="badge-discount">-70% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">📝 Study Materials</span>
+                  <span class="listing-time">2 days ago</span>
+                </div>
+                <h3 class="listing-title">DSA Complete Handwritten Notes</h3>
+                <p class="listing-snippet">Includes Trees, Graphs, DP with colored diagrams & university past year solved questions.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹350</span>
+                  <span class="price-original">₹1,200</span>
+                  <span class="price-saved">Save ₹850</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar">DP</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Deep P. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">CS Dept • Class of '26</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Campus Food Court</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="5">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 6: Wireless Headphones -->
+            <article class="listing-card" data-category="electronics" data-title="Wireless Over-Ear Bluetooth Headphones (Fast Charge)" data-price="750" data-condition="Like New" data-seller="Bhavana N." data-branch="Biotech '25" data-location="Student Sports Center">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-rose">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <path d="M40 70c0-22 18-40 40-40s40 18 40 40" stroke="#be123c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                    <rect x="30" y="60" width="16" height="34" rx="8" fill="#e11d48"/>
+                    <rect x="114" y="60" width="16" height="34" rx="8" fill="#e11d48"/>
+                    <circle cx="80" cy="30" r="4" fill="#fb7185"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-like-new">✨ Like New</span>
+                <span class="badge-discount">-62% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">💻 Electronics</span>
+                  <span class="listing-time">2 days ago</span>
+                </div>
+                <h3 class="listing-title">Wireless Bluetooth Headphones</h3>
+                <p class="listing-snippet">20hr battery life, punchy bass, aux cable and carrying pouch included. Super clean.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹750</span>
+                  <span class="price-original">₹1,999</span>
+                  <span class="price-saved">Save ₹1,249</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar avatar-bhavana">BN</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Bhavana N. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">Biotech Dept • Class of '25</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Student Activity Hub</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="6">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 7: Drawing Board Kit -->
+            <article class="listing-card" data-category="other" data-title="Engineering Drawing Board (A2 Size) + Mini Drafter Kit" data-price="490" data-condition="Good Condition" data-seller="Chethan S." data-branch="ECE '24" data-location="Mechanical Lab Block">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-indigo">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <rect x="25" y="20" width="110" height="80" rx="3" fill="#d97706"/>
+                    <rect x="30" y="25" width="100" height="70" fill="#fef3c7"/>
+                    <line x1="50" y1="35" x2="110" y2="85" stroke="#92400e" stroke-width="2"/>
+                    <circle cx="80" cy="60" r="14" stroke="#d97706" stroke-width="2" fill="none"/>
+                    <rect x="95" y="30" width="25" height="15" rx="2" fill="#1e293b"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-good">👌 Complete Kit</span>
+                <span class="badge-discount">-67% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">🎒 Essentials</span>
+                  <span class="listing-time">3 days ago</span>
+                </div>
+                <h3 class="listing-title">Drawing Board + Mini Drafter</h3>
+                <p class="listing-snippet">Mandatory 1st/2nd sem drawing kit. Wooden board with clips & precision drafter tool.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹490</span>
+                  <span class="price-original">₹1,500</span>
+                  <span class="price-saved">Save ₹1,010</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar avatar-chethan">CS</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Chethan S. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">ECE Dept • Class of '24</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Mechanical Lab Block</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="7">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 8: Concepts of Physics HC Verma -->
+            <article class="listing-card" data-category="books" data-title="Concepts of Physics by HC Verma (Vol 1 & 2 Complete Set)" data-price="420" data-condition="Like New" data-seller="Chinmayee B." data-branch="AI & DS '24" data-location="Central Library">
+              <div class="listing-image-container">
+                <div class="listing-img-box img-bg-cyan">
+                  <svg viewBox="0 0 160 120" class="listing-svg-art" fill="none">
+                    <rect x="30" y="20" width="45" height="80" rx="3" fill="#0369a1"/>
+                    <rect x="85" y="20" width="45" height="80" rx="3" fill="#0284c7"/>
+                    <text x="52" y="60" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">VOL 1</text>
+                    <text x="107" y="60" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">VOL 2</text>
+                    <line x1="38" y1="35" x2="66" y2="35" stroke="#7dd3fc" stroke-width="2"/>
+                    <line x1="93" y1="35" x2="121" y2="35" stroke="#7dd3fc" stroke-width="2"/>
+                  </svg>
+                </div>
+                <span class="badge-condition cond-like-new">✨ 2-Book Set</span>
+                <span class="badge-discount">-62% OFF</span>
+              </div>
+              <div class="listing-content">
+                <div class="listing-meta-top">
+                  <span class="listing-cat">📚 Textbooks</span>
+                  <span class="listing-time">3 days ago</span>
+                </div>
+                <h3 class="listing-title">Concepts of Physics (Vol 1 & 2)</h3>
+                <p class="listing-snippet">HC Verma legendary classic. Both volumes bundled together in great condition.</p>
+                
+                <div class="listing-price-box">
+                  <span class="price-main">₹420</span>
+                  <span class="price-original">₹1,100</span>
+                  <span class="price-saved">Save ₹680</span>
+                </div>
+
+                <div class="listing-seller-card">
+                  <div class="seller-avatar avatar-chinmayee">CB</div>
+                  <div class="seller-info">
+                    <span class="seller-name">Chinmayee B. <span class="v-tick">✓</span></span>
+                    <span class="seller-dept">AI & DS • Class of '24</span>
+                  </div>
+                </div>
+
+                <div class="listing-footer">
+                  <div class="listing-loc">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Central Library Lawn</span>
+                  </div>
+                  <button type="button" class="btn-view-item" data-item-id="8">
+                    View
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+          
+          <!-- Empty Search State (hidden by default) -->
+          <div class="empty-search-state" id="emptySearchState" style="display: none;">
+            <div class="empty-icon">🔍</div>
+            <h3>No matching campus items found</h3>
+            <p>Try searching for different terms like "Calculus", "Casio", or switch category filter.</p>
+            <button type="button" class="btn btn-secondary" id="btnResetFilters">Reset Filters</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer id="footer" class="site-footer">
